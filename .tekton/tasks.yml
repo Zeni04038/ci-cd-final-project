@@ -39,13 +39,13 @@ kind: Task
 metadata:
   name: nose
 spec:
-  description: This task will test all the files.
+  description: This task run nose test cases.
   workspaces:
     - name: source
   params:
     - name: args
       description: Arguments to pass to nosetests
-      type: starting
+      type: string
       default: "-v"
   steps:
     - name: nosetests
